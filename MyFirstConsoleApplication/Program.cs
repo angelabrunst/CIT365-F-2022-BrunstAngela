@@ -10,10 +10,11 @@ namespace MyFirstConsoleApplication
     {
         static void Main()
         {
+            GetUserNameAndLocation();
 
         }
 
-        private void GetUserNameAndLocation()
+        private static void GetUserNameAndLocation()
         {
             Person person = new Person();
             Console.WriteLine("What is your name?");

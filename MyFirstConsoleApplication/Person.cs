@@ -8,7 +8,7 @@ namespace MyFirstConsoleApplication
 {
     internal class Person
     {
-        public string Name;
+        public string name;
         public string location;
     }
 }
