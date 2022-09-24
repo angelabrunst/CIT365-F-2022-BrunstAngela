@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace MathQuiz
@@ -30,6 +31,9 @@ namespace MathQuiz
 
         public void StartTheQuiz()
         {
+            // Current Date
+            todayDate.Text = DateTime.Today.ToString("dd MMMM yyyy");
+
             // Fill in the addition problem. Generate two random numbers to add. Store the values in the variables 'addend1' and 'addend2'.
             addend1 = randomizer.Next(51);
             addend2 = randomizer.Next(51);
@@ -117,6 +121,16 @@ namespace MathQuiz
                 // If CheckTheAnswer() returns false, keep counting down. Decrease the time left by one second and display the new time left by updating the Time Left label.
                 timeLeft = timeLeft - 1;
                 timeLabel.Text = timeLeft + " seconds";
+
+                // Color changes to red when 5 seconds remain.
+                if (timeLeft > 5)
+                {
+                    timeLabel.BackColor = Color.White;
+                }
+                else
+                {
+                    timeLabel.BackColor = Color.Red;
+                }
             }
             else
             {
@@ -142,6 +156,11 @@ namespace MathQuiz
                 int lengthOfAnswer = answerBox.Value.ToString().Length;
                 answerBox.Select(0, lengthOfAnswer);
             }
+        }
+
+        private void todayDate_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
