@@ -20,6 +20,7 @@
             base.Dispose(disposing);
         }
 
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -28,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timeLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,6 +54,7 @@
             this.dividedRightLabel = new System.Windows.Forms.Label();
             this.dividedLeftLabel = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.difference)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.product)).BeginInit();
@@ -62,7 +65,7 @@
             // 
             this.timeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(127, 9);
+            this.timeLabel.Location = new System.Drawing.Point(268, 9);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(200, 30);
             this.timeLabel.TabIndex = 0;
@@ -70,201 +73,222 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(61, 9);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(109, 30);
+            this.label1.Size = new System.Drawing.Size(200, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "Time Left";
             // 
             // plusLeftLabel
             // 
+            this.plusLeftLabel.AutoSize = true;
             this.plusLeftLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plusLeftLabel.Location = new System.Drawing.Point(56, 73);
+            this.plusLeftLabel.Location = new System.Drawing.Point(56, 61);
             this.plusLeftLabel.Name = "plusLeftLabel";
-            this.plusLeftLabel.Size = new System.Drawing.Size(40, 33);
+            this.plusLeftLabel.Size = new System.Drawing.Size(25, 29);
             this.plusLeftLabel.TabIndex = 2;
             this.plusLeftLabel.Text = "?";
             this.plusLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // plusRightLabel
             // 
+            this.plusRightLabel.AutoSize = true;
             this.plusRightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plusRightLabel.Location = new System.Drawing.Point(122, 73);
+            this.plusRightLabel.Location = new System.Drawing.Point(192, 61);
             this.plusRightLabel.Name = "plusRightLabel";
-            this.plusRightLabel.Size = new System.Drawing.Size(40, 33);
+            this.plusRightLabel.Size = new System.Drawing.Size(25, 29);
             this.plusRightLabel.TabIndex = 3;
             this.plusRightLabel.Text = "?";
             this.plusRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
+            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(161, 73);
+            this.label2.Location = new System.Drawing.Point(241, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 33);
+            this.label2.Size = new System.Drawing.Size(27, 29);
             this.label2.TabIndex = 4;
             this.label2.Text = "=";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // addition
             // 
+            this.addition.AutoSize = true;
             this.addition.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addition.Location = new System.Drawing.Point(89, 73);
+            this.addition.Location = new System.Drawing.Point(122, 61);
             this.addition.Name = "addition";
-            this.addition.Size = new System.Drawing.Size(40, 33);
+            this.addition.Size = new System.Drawing.Size(27, 29);
             this.addition.TabIndex = 5;
             this.addition.Text = "+";
             this.addition.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // sum
             // 
+            this.sum.AutoSize = true;
             this.sum.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sum.Location = new System.Drawing.Point(207, 73);
+            this.sum.Location = new System.Drawing.Point(287, 59);
             this.sum.Name = "sum";
             this.sum.Size = new System.Drawing.Size(101, 35);
             this.sum.TabIndex = 1;
+            this.sum.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // difference
             // 
+            this.difference.AutoSize = true;
             this.difference.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.difference.Location = new System.Drawing.Point(207, 118);
+            this.difference.Location = new System.Drawing.Point(287, 116);
             this.difference.Name = "difference";
             this.difference.Size = new System.Drawing.Size(101, 35);
             this.difference.TabIndex = 2;
             // 
             // label3
             // 
+            this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(89, 118);
+            this.label3.Location = new System.Drawing.Point(122, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 33);
+            this.label3.Size = new System.Drawing.Size(21, 29);
             this.label3.TabIndex = 10;
             this.label3.Text = "-";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
+            this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(161, 118);
+            this.label4.Location = new System.Drawing.Point(241, 118);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 33);
+            this.label4.Size = new System.Drawing.Size(27, 29);
             this.label4.TabIndex = 9;
             this.label4.Text = "=";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // minusRightLabel
             // 
+            this.minusRightLabel.AutoSize = true;
             this.minusRightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minusRightLabel.Location = new System.Drawing.Point(122, 118);
+            this.minusRightLabel.Location = new System.Drawing.Point(192, 118);
             this.minusRightLabel.Name = "minusRightLabel";
-            this.minusRightLabel.Size = new System.Drawing.Size(40, 33);
+            this.minusRightLabel.Size = new System.Drawing.Size(25, 29);
             this.minusRightLabel.TabIndex = 8;
             this.minusRightLabel.Text = "?";
             this.minusRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // minusLeftLabel
             // 
+            this.minusLeftLabel.AutoSize = true;
             this.minusLeftLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minusLeftLabel.Location = new System.Drawing.Point(56, 118);
             this.minusLeftLabel.Name = "minusLeftLabel";
-            this.minusLeftLabel.Size = new System.Drawing.Size(40, 33);
+            this.minusLeftLabel.Size = new System.Drawing.Size(25, 29);
             this.minusLeftLabel.TabIndex = 7;
             this.minusLeftLabel.Text = "?";
             this.minusLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // product
             // 
+            this.product.AutoSize = true;
             this.product.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.product.Location = new System.Drawing.Point(207, 161);
+            this.product.Location = new System.Drawing.Point(287, 172);
             this.product.Name = "product";
             this.product.Size = new System.Drawing.Size(101, 35);
             this.product.TabIndex = 3;
             // 
             // label7
             // 
+            this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(89, 161);
+            this.label7.Location = new System.Drawing.Point(122, 174);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 33);
+            this.label7.Size = new System.Drawing.Size(27, 29);
             this.label7.TabIndex = 15;
             this.label7.Text = "×";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
+            this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(161, 161);
+            this.label8.Location = new System.Drawing.Point(241, 174);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 33);
+            this.label8.Size = new System.Drawing.Size(27, 29);
             this.label8.TabIndex = 14;
             this.label8.Text = "=";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timesRightLabel
             // 
+            this.timesRightLabel.AutoSize = true;
             this.timesRightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timesRightLabel.Location = new System.Drawing.Point(122, 161);
+            this.timesRightLabel.Location = new System.Drawing.Point(192, 174);
             this.timesRightLabel.Name = "timesRightLabel";
-            this.timesRightLabel.Size = new System.Drawing.Size(40, 33);
+            this.timesRightLabel.Size = new System.Drawing.Size(25, 29);
             this.timesRightLabel.TabIndex = 13;
             this.timesRightLabel.Text = "?";
             this.timesRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timesLeftLabel
             // 
+            this.timesLeftLabel.AutoSize = true;
             this.timesLeftLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timesLeftLabel.Location = new System.Drawing.Point(56, 161);
+            this.timesLeftLabel.Location = new System.Drawing.Point(56, 174);
             this.timesLeftLabel.Name = "timesLeftLabel";
-            this.timesLeftLabel.Size = new System.Drawing.Size(40, 33);
+            this.timesLeftLabel.Size = new System.Drawing.Size(25, 29);
             this.timesLeftLabel.TabIndex = 12;
             this.timesLeftLabel.Text = "?";
             this.timesLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // quotient
             // 
+            this.quotient.AutoSize = true;
             this.quotient.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quotient.Location = new System.Drawing.Point(207, 203);
+            this.quotient.Location = new System.Drawing.Point(287, 225);
             this.quotient.Name = "quotient";
             this.quotient.Size = new System.Drawing.Size(101, 35);
             this.quotient.TabIndex = 4;
             // 
             // label11
             // 
+            this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(89, 203);
+            this.label11.Location = new System.Drawing.Point(122, 227);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 33);
+            this.label11.Size = new System.Drawing.Size(27, 29);
             this.label11.TabIndex = 20;
             this.label11.Text = "÷";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
             // 
+            this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(161, 203);
+            this.label12.Location = new System.Drawing.Point(241, 227);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 33);
+            this.label12.Size = new System.Drawing.Size(27, 29);
             this.label12.TabIndex = 19;
             this.label12.Text = "=";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dividedRightLabel
             // 
+            this.dividedRightLabel.AutoSize = true;
             this.dividedRightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dividedRightLabel.Location = new System.Drawing.Point(122, 203);
+            this.dividedRightLabel.Location = new System.Drawing.Point(192, 227);
             this.dividedRightLabel.Name = "dividedRightLabel";
-            this.dividedRightLabel.Size = new System.Drawing.Size(40, 33);
+            this.dividedRightLabel.Size = new System.Drawing.Size(25, 29);
             this.dividedRightLabel.TabIndex = 18;
             this.dividedRightLabel.Text = "?";
             this.dividedRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dividedLeftLabel
             // 
+            this.dividedLeftLabel.AutoSize = true;
             this.dividedLeftLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dividedLeftLabel.Location = new System.Drawing.Point(56, 203);
+            this.dividedLeftLabel.Location = new System.Drawing.Point(56, 227);
             this.dividedLeftLabel.Name = "dividedLeftLabel";
-            this.dividedLeftLabel.Size = new System.Drawing.Size(40, 33);
+            this.dividedLeftLabel.Size = new System.Drawing.Size(25, 29);
             this.dividedLeftLabel.TabIndex = 17;
             this.dividedLeftLabel.Text = "?";
             this.dividedLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -273,18 +297,24 @@
             // 
             this.startButton.AutoSize = true;
             this.startButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startButton.Location = new System.Drawing.Point(127, 245);
+            this.startButton.Location = new System.Drawing.Point(148, 296);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(131, 34);
             this.startButton.TabIndex = 0;
             this.startButton.Text = "Start the Quiz";
             this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 290);
+            this.ClientSize = new System.Drawing.Size(480, 357);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.quotient);
             this.Controls.Add(this.label11);
@@ -310,8 +340,8 @@
             this.Controls.Add(this.timeLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(500, 400);
             this.Name = "Form1";
             this.Text = "Angela Brunst Math Quiz";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -349,6 +379,7 @@
         private System.Windows.Forms.Label dividedRightLabel;
         private System.Windows.Forms.Label dividedLeftLabel;
         private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
