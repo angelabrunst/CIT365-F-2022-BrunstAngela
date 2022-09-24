@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Media;
 using System.Windows.Forms;
 
 namespace MathQuiz
@@ -106,6 +107,8 @@ namespace MathQuiz
             startButton.Enabled = false;
         }
 
+        public static System.Media.SystemSound Beep { get; }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (CheckTheAnswer())
@@ -114,6 +117,9 @@ namespace MathQuiz
                 timer1.Stop();
                 MessageBox.Show("You got all the answers right!",
                                 "Congratulations!");
+                // Beep when correct
+                SystemSounds.Beep.Play();
+
                 startButton.Enabled = true;
             }
             else if (timeLeft > 0)
