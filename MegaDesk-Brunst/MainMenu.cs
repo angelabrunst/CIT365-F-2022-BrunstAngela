@@ -43,10 +43,7 @@ namespace MegaDesk_Brunst
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            MainMenu mainMenu = new MainMenu();
-            mainMenu.Tag = this;
-            mainMenu.Show();
-            Close();
+           
         }
     }
 }
