@@ -37,6 +37,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.customerName = new System.Windows.Forms.TextBox();
+            this.rushDays = new System.Windows.Forms.TextBox();
+            this.width = new System.Windows.Forms.TextBox();
+            this.depth = new System.Windows.Forms.TextBox();
+            this.numOfDrawers = new System.Windows.Forms.TextBox();
+            this.surfaceMaterials = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // returnHomeQuoteButton
@@ -118,18 +124,66 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(303, 435);
+            this.button1.Location = new System.Drawing.Point(299, 435);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 45);
             this.button1.TabIndex = 8;
             this.button1.Text = "&Submit";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // customerName
+            // 
+            this.customerName.Location = new System.Drawing.Point(255, 131);
+            this.customerName.Name = "customerName";
+            this.customerName.Size = new System.Drawing.Size(419, 26);
+            this.customerName.TabIndex = 9;
+            // 
+            // rushDays
+            // 
+            this.rushDays.Location = new System.Drawing.Point(255, 179);
+            this.rushDays.Name = "rushDays";
+            this.rushDays.Size = new System.Drawing.Size(419, 26);
+            this.rushDays.TabIndex = 10;
+            // 
+            // width
+            // 
+            this.width.Location = new System.Drawing.Point(255, 228);
+            this.width.Name = "width";
+            this.width.Size = new System.Drawing.Size(419, 26);
+            this.width.TabIndex = 11;
+            // 
+            // depth
+            // 
+            this.depth.Location = new System.Drawing.Point(255, 275);
+            this.depth.Name = "depth";
+            this.depth.Size = new System.Drawing.Size(419, 26);
+            this.depth.TabIndex = 12;
+            // 
+            // numOfDrawers
+            // 
+            this.numOfDrawers.Location = new System.Drawing.Point(255, 324);
+            this.numOfDrawers.Name = "numOfDrawers";
+            this.numOfDrawers.Size = new System.Drawing.Size(419, 26);
+            this.numOfDrawers.TabIndex = 13;
+            // 
+            // surfaceMaterials
+            // 
+            this.surfaceMaterials.Location = new System.Drawing.Point(255, 380);
+            this.surfaceMaterials.Name = "surfaceMaterials";
+            this.surfaceMaterials.Size = new System.Drawing.Size(419, 26);
+            this.surfaceMaterials.TabIndex = 14;
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 512);
+            this.Controls.Add(this.surfaceMaterials);
+            this.Controls.Add(this.numOfDrawers);
+            this.Controls.Add(this.depth);
+            this.Controls.Add(this.width);
+            this.Controls.Add(this.rushDays);
+            this.Controls.Add(this.customerName);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -159,5 +213,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox customerName;
+        private System.Windows.Forms.TextBox rushDays;
+        private System.Windows.Forms.TextBox width;
+        private System.Windows.Forms.TextBox depth;
+        private System.Windows.Forms.TextBox numOfDrawers;
+        private System.Windows.Forms.TextBox surfaceMaterials;
     }
 }
