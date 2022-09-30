@@ -1,6 +1,6 @@
 ﻿namespace MegaDesk_Brunst
 {
-    partial class MainMenu
+    partial class ViewAllQuotes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // MainMenu
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 653);
-            this.Name = "MainMenu";
-            this.Text = "Main Menu";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "ViewAllQuotes";
         }
 
         #endregion
     }
 }
-
