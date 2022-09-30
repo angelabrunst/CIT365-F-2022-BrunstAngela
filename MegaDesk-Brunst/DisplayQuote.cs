@@ -16,5 +16,13 @@ namespace MegaDesk_Brunst
         {
             InitializeComponent();
         }
+
+        private void returnHomeQuoteButton_Click(object sender, EventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Tag = this;
+            mainMenu.Show();
+            Close();
+        }
     }
 }
