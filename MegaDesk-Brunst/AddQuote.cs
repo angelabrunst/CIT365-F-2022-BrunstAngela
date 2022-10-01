@@ -14,6 +14,7 @@ namespace MegaDesk_Brunst
     public partial class AddQuote : Form
     {
         public event System.ComponentModel.CancelEventHandler Validating;
+        public event System.Windows.Forms.KeyPressEventHandler KeyPress;
 
         public AddQuote()
         {
@@ -52,35 +53,8 @@ namespace MegaDesk_Brunst
 
         }
 
-        /*        private void widthInput_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-                {
-                    string errorMsg;
-                    if (!ValidWidth(widthInput.Text, out errorMsg))
-                    {
-                        e.Cancel = true;
-                        widthInput.Select(0, 2);
-                    }
-                }
+        // Validate the depth input
 
-                private void widthInput_Validated(object sender, System.EventArgs e)
-                {
-                }
-
-                public bool ValidWidth(decimal width, out string errorMessage)
-                {
-                    if (widthInput.Value < 24)
-                    {
-                        errorMessage = "Width of desk must be greater than 24 inches";
-                        return false;
-                    }
-                    if (widthInput.Value > 96)
-                    {
-                        errorMessage = "Width of desk must be less than 96 inches.";
-                        return false;
-                    }
-                    errorMessage = "Width must be between 24 and 96 inches.";
-                    return false;
-                }*/
 
         private void returnHomeQuoteButton_Click(object sender, EventArgs e)
         {
