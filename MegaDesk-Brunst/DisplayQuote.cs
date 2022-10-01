@@ -12,9 +12,11 @@ namespace MegaDesk_Brunst
 {
     public partial class DisplayQuote : Form
     {
+        
         public DisplayQuote()
         {
             InitializeComponent();
+            
         }
 
         private void returnHomeQuoteButton_Click(object sender, EventArgs e)

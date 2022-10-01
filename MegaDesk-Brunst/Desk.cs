@@ -6,23 +6,27 @@ using System.Threading.Tasks;
 
 namespace MegaDesk_Brunst
 {
-    enum DesktopMaterial
+    public enum DesktopMaterial
     {
-        Laminate, 
-        Oak, 
-        Pine,
-        Rosewood,
-        Veneer
+        Laminate = 100, 
+        Oak = 200, 
+        Pine = 50,
+        Rosewood = 300,
+        Veneer = 125
     };
 
     internal class Desk
     {
-        // Min & Max for width 
-        //const MIN_WIDTH = 24;
-        //const MAX_WIDTH = 96;
+        public const int MIN_WIDTH = 24;
+        public const int MAX_WIDTH = 96;
+        public const int MIN_DEPTH = 12;
+        public const int MAX_DEPTH = 48;
 
-        // Min & Max for depth
-        //const MIN_DEPTH = 12;
-        //const MAX_DEPTH = 48;
+        public string customerName { get; set; }
+        public int width {  get; set; }
+        public int depth { get; set; }
+        public int numOfDrawers { get; set; }
+        public DesktopMaterial material { get; set; }
+        public int area { get; set; }
     }
 }

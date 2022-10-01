@@ -36,13 +36,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.customerName = new System.Windows.Forms.TextBox();
-            this.rushDays = new System.Windows.Forms.TextBox();
-            this.width = new System.Windows.Forms.TextBox();
-            this.depth = new System.Windows.Forms.TextBox();
-            this.numOfDrawers = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.submitBtn = new System.Windows.Forms.Button();
+            this.customerNameInput = new System.Windows.Forms.TextBox();
+            this.rushDaysInput = new System.Windows.Forms.TextBox();
+            this.widthInput = new System.Windows.Forms.TextBox();
+            this.depthInput = new System.Windows.Forms.TextBox();
+            this.numOfDrawersInput = new System.Windows.Forms.TextBox();
+            this.surfaceMaterialsSelect = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // returnHomeQuoteButton
@@ -121,78 +121,79 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Surface Materials: ";
             // 
-            // button1
+            // submitBtn
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(299, 435);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 45);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "&Submit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.submitBtn.Location = new System.Drawing.Point(299, 435);
+            this.submitBtn.Name = "submitBtn";
+            this.submitBtn.Size = new System.Drawing.Size(159, 45);
+            this.submitBtn.TabIndex = 8;
+            this.submitBtn.Text = "&Submit";
+            this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // customerName
+            // customerNameInput
             // 
-            this.customerName.Location = new System.Drawing.Point(255, 131);
-            this.customerName.Name = "customerName";
-            this.customerName.Size = new System.Drawing.Size(419, 26);
-            this.customerName.TabIndex = 9;
+            this.customerNameInput.Location = new System.Drawing.Point(255, 131);
+            this.customerNameInput.Name = "customerNameInput";
+            this.customerNameInput.Size = new System.Drawing.Size(419, 26);
+            this.customerNameInput.TabIndex = 9;
             // 
-            // rushDays
+            // rushDaysInput
             // 
-            this.rushDays.Location = new System.Drawing.Point(255, 179);
-            this.rushDays.Name = "rushDays";
-            this.rushDays.Size = new System.Drawing.Size(419, 26);
-            this.rushDays.TabIndex = 10;
+            this.rushDaysInput.Location = new System.Drawing.Point(255, 179);
+            this.rushDaysInput.Name = "rushDaysInput";
+            this.rushDaysInput.Size = new System.Drawing.Size(419, 26);
+            this.rushDaysInput.TabIndex = 10;
             // 
-            // width
+            // widthInput
             // 
-            this.width.Location = new System.Drawing.Point(255, 228);
-            this.width.Name = "width";
-            this.width.Size = new System.Drawing.Size(419, 26);
-            this.width.TabIndex = 11;
+            this.widthInput.Location = new System.Drawing.Point(255, 228);
+            this.widthInput.Name = "widthInput";
+            this.widthInput.Size = new System.Drawing.Size(419, 26);
+            this.widthInput.TabIndex = 11;
             // 
-            // depth
+            // depthInput
             // 
-            this.depth.Location = new System.Drawing.Point(255, 275);
-            this.depth.Name = "depth";
-            this.depth.Size = new System.Drawing.Size(419, 26);
-            this.depth.TabIndex = 12;
+            this.depthInput.Location = new System.Drawing.Point(255, 275);
+            this.depthInput.Name = "depthInput";
+            this.depthInput.Size = new System.Drawing.Size(419, 26);
+            this.depthInput.TabIndex = 12;
             // 
-            // numOfDrawers
+            // numOfDrawersInput
             // 
-            this.numOfDrawers.Location = new System.Drawing.Point(255, 324);
-            this.numOfDrawers.Name = "numOfDrawers";
-            this.numOfDrawers.Size = new System.Drawing.Size(419, 26);
-            this.numOfDrawers.TabIndex = 13;
+            this.numOfDrawersInput.Location = new System.Drawing.Point(255, 324);
+            this.numOfDrawersInput.Name = "numOfDrawersInput";
+            this.numOfDrawersInput.Size = new System.Drawing.Size(419, 26);
+            this.numOfDrawersInput.TabIndex = 13;
             // 
-            // comboBox1
+            // surfaceMaterialsSelect
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.surfaceMaterialsSelect.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.surfaceMaterialsSelect.FormattingEnabled = true;
+            this.surfaceMaterialsSelect.Items.AddRange(new object[] {
             "Oak",
             "Laminate",
             "Pine",
             "Rosewood",
             "Veneer"});
-            this.comboBox1.Location = new System.Drawing.Point(255, 372);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(419, 28);
-            this.comboBox1.TabIndex = 14;
+            this.surfaceMaterialsSelect.Location = new System.Drawing.Point(255, 372);
+            this.surfaceMaterialsSelect.Name = "surfaceMaterialsSelect";
+            this.surfaceMaterialsSelect.Size = new System.Drawing.Size(419, 28);
+            this.surfaceMaterialsSelect.TabIndex = 14;
             // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 512);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.numOfDrawers);
-            this.Controls.Add(this.depth);
-            this.Controls.Add(this.width);
-            this.Controls.Add(this.rushDays);
-            this.Controls.Add(this.customerName);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.surfaceMaterialsSelect);
+            this.Controls.Add(this.numOfDrawersInput);
+            this.Controls.Add(this.depthInput);
+            this.Controls.Add(this.widthInput);
+            this.Controls.Add(this.rushDaysInput);
+            this.Controls.Add(this.customerNameInput);
+            this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -220,12 +221,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox customerName;
-        private System.Windows.Forms.TextBox rushDays;
-        private System.Windows.Forms.TextBox width;
-        private System.Windows.Forms.TextBox depth;
-        private System.Windows.Forms.TextBox numOfDrawers;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button submitBtn;
+        private System.Windows.Forms.TextBox customerNameInput;
+        private System.Windows.Forms.TextBox rushDaysInput;
+        private System.Windows.Forms.TextBox widthInput;
+        private System.Windows.Forms.TextBox depthInput;
+        private System.Windows.Forms.TextBox numOfDrawersInput;
+        private System.Windows.Forms.ComboBox surfaceMaterialsSelect;
     }
 }
