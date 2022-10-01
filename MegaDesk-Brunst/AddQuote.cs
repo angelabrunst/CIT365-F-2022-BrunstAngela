@@ -13,6 +13,7 @@ namespace MegaDesk_Brunst
 {
     public partial class AddQuote : Form
     {
+
         public AddQuote()
         {
             InitializeComponent();
