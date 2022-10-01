@@ -32,6 +32,8 @@
             this.viewQuotesButton = new System.Windows.Forms.Button();
             this.searchQuotesButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.deskIMG = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.deskIMG)).BeginInit();
             this.SuspendLayout();
             // 
             // addQuoteButton
@@ -82,12 +84,23 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // deskIMG
+            // 
+            this.deskIMG.Image = global::MegaDesk_Brunst.Properties.Resources.desk;
+            this.deskIMG.Location = new System.Drawing.Point(300, 38);
+            this.deskIMG.Name = "deskIMG";
+            this.deskIMG.Size = new System.Drawing.Size(455, 350);
+            this.deskIMG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.deskIMG.TabIndex = 4;
+            this.deskIMG.TabStop = false;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.deskIMG);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.searchQuotesButton);
             this.Controls.Add(this.viewQuotesButton);
@@ -96,6 +109,7 @@
             this.MinimizeBox = false;
             this.Name = "MainMenu";
             this.Text = "Main Menu";
+            ((System.ComponentModel.ISupportInitialize)(this.deskIMG)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -106,6 +120,7 @@
         private System.Windows.Forms.Button viewQuotesButton;
         private System.Windows.Forms.Button searchQuotesButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.PictureBox deskIMG;
     }
 }
 

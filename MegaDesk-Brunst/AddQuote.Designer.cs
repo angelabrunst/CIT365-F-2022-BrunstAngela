@@ -42,7 +42,7 @@
             this.width = new System.Windows.Forms.TextBox();
             this.depth = new System.Windows.Forms.TextBox();
             this.numOfDrawers = new System.Windows.Forms.TextBox();
-            this.surfaceMaterials = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // returnHomeQuoteButton
@@ -166,19 +166,27 @@
             this.numOfDrawers.Size = new System.Drawing.Size(419, 26);
             this.numOfDrawers.TabIndex = 13;
             // 
-            // surfaceMaterials
+            // comboBox1
             // 
-            this.surfaceMaterials.Location = new System.Drawing.Point(255, 380);
-            this.surfaceMaterials.Name = "surfaceMaterials";
-            this.surfaceMaterials.Size = new System.Drawing.Size(419, 26);
-            this.surfaceMaterials.TabIndex = 14;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Oak",
+            "Laminate",
+            "Pine",
+            "Rosewood",
+            "Veneer"});
+            this.comboBox1.Location = new System.Drawing.Point(255, 372);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(419, 28);
+            this.comboBox1.TabIndex = 14;
             // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 512);
-            this.Controls.Add(this.surfaceMaterials);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.numOfDrawers);
             this.Controls.Add(this.depth);
             this.Controls.Add(this.width);
@@ -218,6 +226,6 @@
         private System.Windows.Forms.TextBox width;
         private System.Windows.Forms.TextBox depth;
         private System.Windows.Forms.TextBox numOfDrawers;
-        private System.Windows.Forms.TextBox surfaceMaterials;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
