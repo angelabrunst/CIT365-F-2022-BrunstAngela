@@ -15,8 +15,6 @@ namespace ScriptureJournal.Models
         public int Chapter { get; set; }
         public int Verse { get; set; }
 
-        [StringLength(15, MinimumLength = 3)]
-        [Required]
         public string Notes { get; set; }
     }
 }
