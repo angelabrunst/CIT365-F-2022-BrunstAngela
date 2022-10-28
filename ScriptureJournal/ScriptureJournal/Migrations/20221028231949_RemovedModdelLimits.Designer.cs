@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ScriptureJournal.Data;
 
@@ -11,9 +12,10 @@ using ScriptureJournal.Data;
 namespace ScriptureJournal.Migrations
 {
     [DbContext(typeof(ScriptureJournalContext))]
-    partial class ScriptureJournalContextModelSnapshot : ModelSnapshot
+    [Migration("20221028231949_RemovedModdelLimits")]
+    partial class RemovedModdelLimits
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

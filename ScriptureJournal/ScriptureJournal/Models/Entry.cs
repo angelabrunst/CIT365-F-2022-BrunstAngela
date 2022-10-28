@@ -9,12 +9,20 @@ namespace ScriptureJournal.Models
         [DataType(DataType.Date)]
         public DateTime DateAdded { get; set; }
 
-        [StringLength(12, MinimumLength = 5)]
+        [Display(Name = "Book")]
         [Required]
         public string Book { get; set; }
+
+        [Display(Name = "Chapter")]
+        [Required]
         public int Chapter { get; set; }
+
+        [Display(Name = "Verse")]
+        [Required]
         public int Verse { get; set; }
 
+        [Display(Name = "Notes")]
+        [Required]
         public string Notes { get; set; }
     }
 }

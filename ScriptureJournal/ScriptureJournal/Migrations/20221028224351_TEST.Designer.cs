@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ScriptureJournal.Data;
 
@@ -11,9 +12,10 @@ using ScriptureJournal.Data;
 namespace ScriptureJournal.Migrations
 {
     [DbContext(typeof(ScriptureJournalContext))]
-    partial class ScriptureJournalContextModelSnapshot : ModelSnapshot
+    [Migration("20221028224351_TEST")]
+    partial class TEST
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,7 +34,8 @@ namespace ScriptureJournal.Migrations
 
                     b.Property<string>("Book")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<int>("Chapter")
                         .HasColumnType("int");
@@ -42,7 +45,8 @@ namespace ScriptureJournal.Migrations
 
                     b.Property<string>("Notes")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<int>("Verse")
                         .HasColumnType("int");
