@@ -5,31 +5,37 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Scripture Entries</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create" class="btn btn-outline-success">Create New</a>
 </p>
 
 <form>
     <p>
-        Select Date:
-        <select asp-for="EntryDate" asp-items="Model.DateAdded">
-            <option value="">All</option>
-        </select>
-        Select Book: 
-        <select asp-for="ScriptureBook" asp-items="Model.Book">
-            <option value="">All</option>
-        </select>
-        Search Notes: 
-        <input type="text" asp-for="SearchString" />
-        <input type="submit" value="Filter" />
+        <div class="form-group">
+            <label class="form-label mt-4">Select Date</label>
+            <select asp-for="EntryDate" asp-items="Model.DateAdded" class="form-select">
+                <option value="">All</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-label mt-4">Select Book</label>
+            <select asp-for="ScriptureBook" asp-items="Model.Book" class="form-select">
+                <option value="">All</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-label mt-4">Search Notes</label>
+            <input type="text" asp-for="SearchString" class="form-control" />
+            <input type="submit" value="Filter" class="btn btn-outline-success" />
+        </div>
     </p>
 </form>
 
-<table class="table">
+<table class="table table-hover">
     <thead>
-        <tr>
+        <tr class="table-active">
             <th>
                 @Html.DisplayNameFor(model => model.Entry[0].DateAdded)
             </th>
@@ -67,9 +73,11 @@
                 @Html.DisplayFor(modelItem => item.Notes)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                        <a asp-page="./Edit" asp-route-id="@item.ID" class="btn btn-secondary">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.ID" class="btn btn-secondary">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.ID" class="btn btn-secondary">Delete</a>
+                </div>
             </td>
         </tr>
 }
