@@ -7,6 +7,7 @@ namespace ScriptureJournal.Models
         public int ID { get; set; }
 
         [DataType(DataType.Date)]
+        [Display(Name = "Entry Date")]
         public DateTime DateAdded { get; set; }
 
         [Display(Name = "Book")]
