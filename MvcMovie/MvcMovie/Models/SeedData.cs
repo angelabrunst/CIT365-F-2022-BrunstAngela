@@ -26,6 +26,7 @@ namespace MvcMovie.Models
                         Title = "Saints and Soilders",
                         ReleaseDate = DateTime.Parse("2003-2-12"),
                         Genre = "Drama",
+                        Rating = "PG-13",
                         Price = 7.99M
                     },
 
@@ -34,6 +35,7 @@ namespace MvcMovie.Models
                         Title = "The Other Side of Heaven",
                         ReleaseDate = DateTime.Parse("2001-3-13"),
                         Genre = "Biography",
+                        Rating = "PG",
                         Price = 8.99M
                     },
 
@@ -42,6 +44,7 @@ namespace MvcMovie.Models
                         Title = "The Best Two Years",
                         ReleaseDate = DateTime.Parse("2004-2-23"),
                         Genre = "Comedy",
+                        Rating = "PG",
                         Price = 9.99M
                     },
 
@@ -50,6 +53,7 @@ namespace MvcMovie.Models
                         Title = "The Singles Ward",
                         ReleaseDate = DateTime.Parse("2002-4-15"),
                         Genre = "Comedy",
+                        Rating = "PG",
                         Price = 3.99M
                     },
                     new Movie
@@ -57,6 +61,7 @@ namespace MvcMovie.Models
                         Title = "17 Miracles",
                         ReleaseDate = DateTime.Parse("2011-4-15"),
                         Genre = "Drama",
+                        Rating = "PG",
                         Price = 4.99M
                     },
                     new Movie
@@ -64,6 +69,7 @@ namespace MvcMovie.Models
                         Title = "Charly",
                         ReleaseDate = DateTime.Parse("2002-4-15"),
                         Genre = "Romance",
+                        Rating = "PG",
                         Price = 2.99M
                     },
                     new Movie
@@ -71,6 +77,7 @@ namespace MvcMovie.Models
                         Title = "The Work and the Glory",
                         ReleaseDate = DateTime.Parse("2004-4-15"),
                         Genre = "Romance",
+                        Rating = "PG",
                         Price = 9.99M
                     },
                     new Movie
@@ -78,6 +85,7 @@ namespace MvcMovie.Models
                         Title = "Sons of Provo",
                         ReleaseDate = DateTime.Parse("2004-4-15"),
                         Genre = "Comedy",
+                        Rating = "PG",
                         Price = 2.99M
                     },
                     new Movie
@@ -85,6 +93,7 @@ namespace MvcMovie.Models
                         Title = "God's Army",
                         ReleaseDate = DateTime.Parse("2000-4-15"),
                         Genre = "Drama",
+                        Rating = "PG",
                         Price = 3.99M
                     }
                 );
