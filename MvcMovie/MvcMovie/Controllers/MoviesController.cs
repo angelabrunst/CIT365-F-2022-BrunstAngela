@@ -76,7 +76,7 @@ namespace MvcMovie.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating,PhotoPath")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +86,36 @@ namespace MvcMovie.Controllers
             }
             return View(movie);
         }
+
+        /*        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating,Photo")] MovieCreateViewModel model)
+                {
+                    if (ModelState.IsValid)
+                    {
+                        string uniqueFileName = null;
+                        if (model.Photo != null)
+                        {
+                            string uploadsFolder = Path.Combine(hostingEnvironment.WebRootPath, "images");
+                            uniqueFileName = Guid.NewGuid().ToString() + "_" + model.Photo.FileName;
+                            string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                            model.Photo.CopyTo(new FileStream(filePath, FileMode.Create));
+                        }
+
+                        Movie newMovie = new Movie
+                        {
+                            Title = model.Title,
+                            ReleaseDate = model.ReleaseDate,
+                            Genre = model.Genre,
+                            Price = model.Price,
+                            Rating = model.Rating,
+                            PhotoPath = uniqueFileName
+                        };
+
+                        _context.Add(newMovie);
+                        await _context.SaveChangesAsync();
+                        return RedirectToAction("details", new { id = newMovie.Id });
+                    }
+                    return View();
+                }*/
 
         // GET: Movies/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -108,7 +138,7 @@ namespace MvcMovie.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,Rating,PhotoPath")] Movie movie)
         {
             if (id != movie.Id)
             {

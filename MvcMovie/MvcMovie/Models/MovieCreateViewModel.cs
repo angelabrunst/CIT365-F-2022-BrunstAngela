@@ -1,13 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace MvcMovie.Models
 {
-    public class Movie
+    public class MovieCreateViewModel
     {
-        public int Id { get; set; }
-
         [StringLength(60, MinimumLength = 3)]
         [Required]
         public string? Title { get; set; }
@@ -30,6 +28,6 @@ namespace MvcMovie.Models
         [StringLength(5)]
         [Required]
         public string? Rating { get; set; }
-        public string PhotoPath { get; set; }
+        public IFormFile Photo { get; set; }
     }
 }
