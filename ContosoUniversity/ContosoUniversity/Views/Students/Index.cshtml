@@ -4,18 +4,15 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Students</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 
 <form asp-action="Index" method="get">
     <div class="form-actions no-color">
         <p>
-            Find by name: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
-            <input type="submit" value="Search" class="btn btn-default" /> |
-            <a asp-action="Index">Back to Full List</a>
+            <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" placeholder="Find by name..."/>
+            <input type="submit" value="Search" class="btn btn-default" /> 
+            <a asp-action="Index" class="btn btn-outline-primary">Back to Full List</a>
         </p>
     </div>
 </form>
@@ -24,10 +21,10 @@
     <thead>
         <tr>
             <th>
-                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Last Name</a>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Student Last Name</a>
             </th>
             <th>
-                First Name
+                Student First Name
             </th>
             <th>
                 <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Enrollment Date</a>
@@ -47,11 +44,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.EnrollmentDate)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-secondary">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-secondary">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID"class="btn btn-secondary">Delete</a>
+                </td>
+            </div>
         </tr>
 }
     </tbody>
@@ -76,3 +75,7 @@
    class="btn btn-default @nextDisabled">
     Next
 </a>
+<br />
+<p>
+    <a asp-action="Create" class="btn btn-outline-primary">Create New</a>
+</p>

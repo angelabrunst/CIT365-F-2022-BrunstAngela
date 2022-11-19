@@ -6,17 +6,14 @@
 
 <h1>Courses</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CourseID)
+                Course ID
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
+                Course Title
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Credits)
@@ -42,12 +39,18 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Department.Name)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.CourseID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CourseID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CourseID">Delete</a>
-            </td>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CourseID" class="btn btn-secondary">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.CourseID" class="btn btn-secondary">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.CourseID" class="btn btn-secondary">Delete</a>
+                </td>
+            </div>
         </tr>
 }
     </tbody>
 </table>
+
+<p>
+    <a asp-action="Create" class="btn btn-outline-primary">Create New</a>
+</p>

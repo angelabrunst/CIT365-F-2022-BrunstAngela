@@ -6,14 +6,11 @@
 
 <h1>Departments</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<table class="table table-hover">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                Department Name
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Budget)
@@ -48,12 +45,18 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Administrator.FullName)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.DepartmentID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.DepartmentID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.DepartmentID">Delete</a>
-            </td>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.DepartmentID" class="btn btn-secondary">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.DepartmentID" class="btn btn-secondary">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.DepartmentID" class="btn btn-secondary">Delete</a>
+                </td>
+            </div>
         </tr>
 }
     </tbody>
 </table>
+
+<p>
+    <a asp-action="Create" class="btn btn-outline-primary">Create New</a>
+</p>
